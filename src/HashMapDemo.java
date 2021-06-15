@@ -1,9 +1,11 @@
+package src;
+
 import java.util.*;
 
 public class HashMapDemo {
     public static void main(String args[]) {
 
-        Mpa<Integer, String> map = new HashMap<>();
+        Map<Integer, String> map = new HashMap<>();
 
         map.put(1, "One");
         map.put(2, "Two");
@@ -12,7 +14,7 @@ public class HashMapDemo {
 
         map.forEach((key, value) -> {
             System.out.println(key + " - " + value);
-        })
+        });
 
 
       for(Map.Entry<Integer, String> entry: map.entrySet())  {
@@ -20,6 +22,12 @@ public class HashMapDemo {
           String value = entry.getValue();
           System.out.println(key + " - " + value);
         }
+
+      if(map.containsKey(1)) {
+          System.out.println("Key" + map.get(1));
+      } else {
+
+      }
 
 
     }
