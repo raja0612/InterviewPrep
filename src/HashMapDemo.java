@@ -25,10 +25,30 @@ public class HashMapDemo {
 
       if(map.containsKey(1)) {
           System.out.println("Key" + map.get(1));
-      } else {
-
       }
 
+      int a [] = {1, 2, 2, 3, 1, 4};
+
+      Map<Integer, Integer> frCounter = new HashMap<>();
+
+     /* for(int x : a) {
+
+          if(frCounter.containsKey(x)) {
+              frCounter.put(x, frCounter.get(x) + 1);
+          } else  {
+              frCounter.put(x, 1);
+          }
+      }*/
+
+
+        for(int x : a) {
+            frCounter.putIfAbsent(x, 0);
+            frCounter.put(x, frCounter.get(x) + 1);
+        }
+
+      frCounter.forEach((key, value) -> {
+          System.out.println(key + " - " + value);
+       });
 
     }
 }
