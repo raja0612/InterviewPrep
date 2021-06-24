@@ -1,9 +1,8 @@
-package src.companies.Shopify;
+package src.problems;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 class Product {
     String product;
