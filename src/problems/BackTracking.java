@@ -25,16 +25,14 @@ public class BackTracking {
 
         for(int i = start; i< candidates.length; i++) {
                 tempList.add(candidates[i]);
-                System.out.println("tempList before"+tempList);
                 backtrack(candidates, target, i + 1, sum+candidates[i], tempList);
                 tempList.remove(tempList.size() - 1);
-                System.out.println("tempList after"+tempList);
         }
 
     }
 
     public static void main(String args[]) {
-        System.out.println(combinationSum2(new int[]{1,2,3}, 8));
+        System.out.println(combinationSum2(new int[]{1,2,3, 3}, 6));
     }
 }
 

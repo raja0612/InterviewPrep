@@ -19,21 +19,13 @@ class DFSTree{
     }
     int height(DFSNode root)
     {
-        if (root == null)
-            return 0;
+        if (root == null) return 0;
         else
         {
-            System.out.println("else");
-            /* compute  height of each subtree */
+        /* compute  height of each subtree */
             int lheight = height(root.left);
             int rheight = height(root.right);
-
-            System.out.println(lheight);
-
-            /* use the larger one */
-            if (lheight > rheight)
-                return(lheight+1);
-            else return(rheight+1);
+            return  lheight > rheight ? lheight+ 1 : rheight+1;
 
         }
     }

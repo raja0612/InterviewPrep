@@ -52,9 +52,41 @@ class Tree {
             }
             result.add(tempList);
         }
+        findRightView(result);
+        System.out.println("");
+        findLeftView(result);
+
+        findZigZagView(result);
         return result;
     }
+
+    private void findZigZagView(List<List<Integer>> result) {
+        System.out.println("ZIG ZAG  VIEW");
+        boolean leftToRight = true;
+        for(List<Integer> each : result) {
+            if(leftToRight){
+                System.out.print(each.get(0));
+            } else {
+                System.out.print(each.get(each.size()-1) + " ");
+            }
+            leftToRight= !leftToRight;
+        }
+    }
+
+    private void findRightView(List<List<Integer>> result) {
+        System.out.println("LEFT SIDE VIEW");
+        for(List<Integer> each : result) {
+            System.out.print(each.get(each.size()-1) + " ");
+        }
+    }
+    private void findLeftView(List<List<Integer>> result) {
+        System.out.println("RIGHT SIDE VIEW");
+        for(List<Integer> each : result) {
+            System.out.print(each.get(0));
+        }
+    }
 }
+
 
 public class BFS {
 

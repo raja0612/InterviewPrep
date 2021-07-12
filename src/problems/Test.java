@@ -23,24 +23,15 @@ public class Test {
             } else {
                 Character popped = stack.pop();
                 System.out.println(popped);
-
                 if(ch != map.get(popped)) {
                     return false;
                 }
             }
-
         }
-
         if(stack.size() != 0) return false;
         return true;
-
-        }
-
-
+    }
     public static  void main(String args[]) {
-
         System.out.println(test("{{[[(())]]}"));
-
-
     }
 }
