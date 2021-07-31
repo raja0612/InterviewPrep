@@ -1,0 +1,11 @@
+Trie is a multiway tree built based on the prefix of strings
+
+root node is empty and each node contains array of nodes initially all of them are null.
+
+Each node stores alphabet and flag that represents true if it is end of word otherwise false.
+
+Time complexity for add, search word and search prefix is O(K) where k iis the length of string.
+
+pros: we can efficiently do prefix search
+cons: need lof of space to store strings
+

@@ -24,7 +24,7 @@ public class MatrixTraverse2 {
         //element (top, topright, right, rightbottom, bottom, bottomleft,  left, topleft)
         // 1(no, no, 2, 6, 5, no, no, no)
 
-        int[][] directions =  {{-1,0}, {-1, 1}, {0,1},{1, 1}, {1,0},{1, -1}, {0, -1}, {-1, -1}};
+        int[][] directions =  {{-1,0}, {-1, 1}, {0,1}, {1, 1}, {1,0}, {1, -1}, {0, -1}, {-1, -1}};
         for(int i=0;i<rows;i++){
             for(int j=0;j<cols;j++){
 
@@ -32,7 +32,7 @@ public class MatrixTraverse2 {
                 for(int[] d: directions){
                     int newI = i+d[0];
                     int newJ = j+d[1];
-                    if(newI >=0 && newI < rows && newJ >= 0  && newJ < cols ){
+                    if(newI >= 0 && newI < rows && newJ >= 0  && newJ < cols ){
                         System.out.print(matrix[newI][newJ]+" ");
                     }
                     else{

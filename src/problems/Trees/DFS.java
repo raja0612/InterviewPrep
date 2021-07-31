@@ -1,4 +1,4 @@
-package src.problems.Trees;
+package problems.Trees;
 
 import java.util.stream.StreamSupport;
 
