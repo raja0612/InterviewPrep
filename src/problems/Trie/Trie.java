@@ -58,7 +58,6 @@ public class Trie {
 
         for(char ch : word.toCharArray()) {
             int index = ch - 'a';
-
             // check if temp children index is null or not
             if(temp.children[index] == null){
                 return  false;
@@ -68,16 +67,34 @@ public class Trie {
         }
         return temp.endOfWord;
     }
+
+    public boolean search_prefix(String word) {
+       if(word.length() == 0) return false;
+        // start from root;
+        TrieNode temp = root;
+
+        for(char ch : word.toCharArray()) {
+            if(ch == '.') continue;
+            int index = ch - 'a';
+            // check if temp children index is null or not
+            if(temp.children[index] == null){
+                return  false;
+            }
+            // update temp children index
+            temp = temp.children[index];
+        }
+        return true;
+    }
     public static void main(String[] args) {
-        String str[] = {"apple", "app", "ape"};
+        String str[] = {"worddictionary","addword","addword","addword","search","search","search","search","bad"};
+        String search[] ={ "","bad","dad","mad","pad","bad",".ad","b.."};
         Trie tree = new Trie();
         for(String s: str) {
             tree.addWord(s);
         }
-        System.out.println(tree.search("apple"));
-        System.out.println(tree.search("app"));
-        System.out.println(tree.search("ape"));
-        System.out.println(tree.search("apex"));
+        for(String s: search) {
+            System.out.print(tree.search_prefix(s)+ " ");
+        }
     }
 
 }

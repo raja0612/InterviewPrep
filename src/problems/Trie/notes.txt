@@ -9,3 +9,14 @@ Time complexity for add, search word and search prefix is O(K) where k iis the l
 pros: we can efficiently do prefix search
 cons: need lof of space to store strings
 
+leetcode problems.
+
+Basic Trie:
+https://leetcode.com/problems/implement-trie-prefix-tree/
+
+https://leetcode.com/problems/design-add-and-search-words-data-structure/
+
+
+Remove sub folders from file system
+https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/
+
